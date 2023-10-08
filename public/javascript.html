@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <p><a href="/">Back to home</a></p>
+
+    <h1 style="font-weight: bold;">Javascript</h1>
+
+    <h2 style="font-weight: bold;">Type coercion</h2>
+    <p>Type coercion is implicit type conversion, as opposed to type casting which is explicit type conversion.</p>
+    <p>Type coercion is best avoided by using the strict equality operators such as === and !==</p>
+
+    <h2 style="font-weight: bold;">Scope and Const</h2>
+    <p>Often, the more static/constant you make code, the easier it is to reason about. As opposed to it being unneccesary dynamic/varying.</p>
+    <p>Therefore it is best to use const when possible.</p>
+    <p>It is best to restrict variables to only be available in the scope in which you intend for them to be used. If variables have an unncessary large/wide scope, the code becomes more difficult to reason about.</p>
+    
+    <h2 style="font-weight: bold;">Functional programming</h2>
+    <p>Functional programming is programming where you use pure functions that dont have any side effects.</p>
+    <p>If functions have side effects, they often become more difficult to reason about when composed together. If you on the other hand use pure functions, then you know exactly what the inputs and outputs are at all times. That is, pure functions are often more composable.</p>
+
+    <h2 style="font-weight: bold;">SSR (server-side-rendering) vs. CSR (client-side-rendering.)</h2>
+    <p>The advantages of SSR depends a lot on how static the content is.</p>
+    <p>If the content served is the same for all users, then you can render the content once, cache it on the server, and then serve it to all users (including search engines). So SSR is great for content where you want to do SEO.</p>
+    <p>On the other hand, if the content is different for each user, then the server needs to render it for each user. In that scenario, for scalability reasons, then it might be preferred for the rendering to be done on each users own computer. The content is also unlikely to be a target of SEO if the content is different for each user.</p>
+    <p>The reason that SSR is better for SEO is that most crawlers do not support javascript and CSR.</p>
+    <p>Another consideration to have in mind when comparing SSR and CSR is what the latency is between the client and the server. If the latency is very high, then it might be a good idea to explore if data can be sent speculatively to the client ahead-of-time, which is then rendered by client.</p>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech</title>
+</head>
+<body>
+    <a href="/">Back to home</a>
+
+    <h1 style="font-weight: bold;">Tech</h1>
+
+    <h2 style="font-weight: bold;">node.js</h2>
+    <p>node.js is a javascript runtime environment where the browser APIs have been removed and replaced with APIs suitable for server-side software.</p>
+    <p>node.js is based on the same javascript virtual machine used in chrome.</p>
+
+    <p>you can run a node app named app.js like this:</p>
+    <p>node app.js</p>
+
+    <p>You can specify third-party dependencies in a package.json file like this:</p>
+    <p><pre>
+{
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
+    </pre></p>
+
+    <p>And then run:</p>
+    <p>npm install</p>
+    <p>In order to install all the dependencies.</p>
+
+    <h2 style="font-weight: bold;">nodemon</h2>
+    <p>nodemon monitors for file changes and automatically restarts node upon any changes.</p>
+    <p>if there is a package.json file, then nodemon uses "main" from package.json in order to determine which file should be passed to node.</p>
+    <p>nodemon can be configured with a nodemon.js config file.</p>
+    <p>nodemon can be made to monitor for file changes in files other than .js files by using the "--ext" option.</p>
+
+    <h2 style="font-weight: bold;">express</h2>
+    <p>express is a node module that provides routing and "middleware" functions.</p>
+    <p>express only contains very few built-in "middleware" functions.</p>
+    <p>"middleware" functions are just callback functions which are called in sequence in response to a specific route.</p>
+    <p>The advantage of using express is that there are a lot of third-party node modules that provide express compatible "middleware" functions.</p>
+
+    <p>The following is an example of a minimal node app that uses express:</p>
+    <p><pre>
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/public/home.html");
+});
+
+app.listen(8080);
+    </pre></p>
+
+</body>
+</html>
